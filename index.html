@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<div class="container">
+        <div class="box" style="height: 620px;">
+            <div>
+        <h1>
+            signup from
+        </h1>
+        <form onsubmit="signup(event)">
+            <input type="text"  style="height: 40px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px; "placeholder="Enter your email" id="email">
+            <br>
+            <input type="password"  style="height: 40px; width: 300px; margin-top: 40px; border: 2px solid black;padding: 5px; border-radius: 20px;" name="" id="password">
+            <br>
+
+            <button type="submit"  style="height: 40px; width: 100px; margin-top: 50px; padding: 5px;background-color: orangered; border-radius: 20px;border: 2px solid black;" >submit</button>
+            
+        </form>
+    </div>
+    <div>
+        <br> 
+    
+        <h1>
+            Login
+            </h1>
+        <form onsubmit="Login(event)">
+            <input type="text"  style="height: 40px; width: 300px; margin-right: 00px;margin-top: 20px; padding: 5px;border-radius: 20px; border: 2px solid black; "placeholder="Enter your email" id="login_email">
+            <input type="password"  style="height: 40px; width: 300px; margin-top: 40px;border-radius: 20px;padding: 5px; border: 2px solid black;" name="" id="login_password">
+            <button type="submit"  style="height: 40px; width: 100px; margin-top: 50px;padding: 5px; border-radius: 20px;background-color:palevioletred; border: 2px solid black;">login</button>
+            <button onclick="logout(event)" style="height: 40px; width: 100px; margin-top: 50px; padding: 5px;border-radius: 20px; background-color:yellow; border: 2px solid black;">Logout</button>
+        </form>
+    </div>
+    
+    
+    
+  
+    
+        </div>
+    <br>
+    <div class="container">
+        <div class="box" style="height: 600px;">
+    <div class="wellcome-box">
+        <h1 style="text-align: center; padding: 10px; margin: 10px;">wellcome-box</h1>
+    </div>
+        <div class="center">
+            <h2>Your account detail</h2>
+            <img src="download.jpg" height="auto" class="propic" width="50%"  alt="no-img" >
+             <input type="file" accept="image/*" onchange="uploadimg(event)" class="byn">
+            <div class="userdetails">
+                <!-- please login -->
+            </div>
+    
+        </div>
+        </div>
+    <div class="container">
+        <div class="box" style="height: 530px;">
+    <div id="model">
+        <h1>user details</h1>
+        <form action="" id="editsprofile" onsubmit="userupdate(event)">
+        <input type="text" name="name" placeholder="name" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    <input type="email" name="profileEmail" placeholder="email" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    <input type="number" name="phone" placeholder="phone" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    <input type="text" name="specialty" placeholder="specialty" id="" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    <input type="text" name="portfolioUrl" placeholder="portfolioUrl" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    <input type="text" name="experience" placeholder="experience" style="height: 30px; width: 300px; margin-right: 0px;margin-top: 20px; border: 2px solid black; padding: 5px;border-radius: 20px;">
+    
+    <button type="submit"  style="height: 40px; width: 100px; margin-top: 50px; padding: 5px;border-radius: 20px; background-color:powderblue; border: 2px solid black;">added</button>
+    </form>
+    <script src="./index.js"></script>
+    <script src="./script/firestore_db.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    <script>
+    
+    const firebaseConfig = {
+    apiKey: "AIzaSyAALNBfNUZ1IF1gf5cs94sPmoGMjM6FdBY",
+    authDomain: "project-two-b9624.firebaseapp.com",
+    projectId: "project-two-b9624",
+    storageBucket: "project-two-b9624.appspot.com",
+    messagingSenderId: "1039135188440",
+    appId: "1:1039135188440:web:6b335d43b817141a1cbead",
+    measurementId: "G-MT9FS8XFQ6"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script> 
+</body>
+</html>
